@@ -21,7 +21,7 @@ jobs:
       - run: python watcher.py --once
         env:
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
-          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+          TG_CHAT_ID: "888676464"
           DROP_PCT: "40"
       - uses: actions/cache/save@v4
         if: always()
