@@ -118,6 +118,8 @@ def check(db, url):
 def main(once=False):
     db = sqlite3.connect(os.path.join(HERE, "prices.db"))
     db.execute("CREATE TABLE IF NOT EXISTS prices (asin TEXT, price REAL, ts REAL)")
+    if not once:
+        notify("✅ مراقبة عروض أمازون اشتغلت")  # proves token/chat id work on startup
     while True:
         blocked = 0
         for url in load_targets(os.path.join(HERE, "asins.txt")):

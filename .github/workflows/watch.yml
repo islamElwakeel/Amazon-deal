@@ -1,7 +1,5 @@
 name: watch
 on:
-  schedule:
-    - cron: "*/5 * * * *"   # GitHub may delay scheduled runs by a few minutes
   workflow_dispatch:
 concurrency: watch
 jobs:
