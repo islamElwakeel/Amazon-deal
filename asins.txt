@@ -1,0 +1,3 @@
+# حط هنا لينك المنتج أو كود الـ ASIN، كل واحد في سطر
+# مثال:
+# https://www.amazon.eg/dp/B0XXXXXXXX

@@ -1,0 +1,30 @@
+name: watch
+on:
+  schedule:
+    - cron: "*/5 * * * *"   # GitHub may delay scheduled runs by a few minutes
+  workflow_dispatch:
+concurrency: watch
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install requests beautifulsoup4
+      - uses: actions/cache/restore@v4   # price history survives between runs
+        with:
+          path: prices.db
+          key: prices-${{ github.run_id }}
+          restore-keys: prices-
+      - run: python watcher.py --once
+        env:
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+          DROP_PCT: "40"
+      - uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: prices.db
+          key: prices-${{ github.run_id }}
