@@ -1,3 +1,22 @@
-# حط هنا لينك المنتج أو كود الـ ASIN، كل واحد في سطر
-# مثال:
-# https://www.amazon.eg/dp/B0XXXXXXXX
+# كل سطر: لينك منتج، أو ASIN، أو لينك قسم/بحث (بيراقب كل المنتجات اللي فيه)
+# كل قسم مرتين: الأرخص الأول (غلطة التسعير بتطلع فوق) + الترتيب العادي
+
+# ثلاجات
+https://www.amazon.eg/s?rh=n%3A21863927031&s=price-asc-rank
+https://www.amazon.eg/s?rh=n%3A21863927031
+
+# تكييفات سبليت
+https://www.amazon.eg/s?rh=n%3A51375777031&s=price-asc-rank
+https://www.amazon.eg/s?rh=n%3A51375777031
+
+# غسالات ملابس
+https://www.amazon.eg/s?rh=n%3A21863947031&s=price-asc-rank
+https://www.amazon.eg/s?rh=n%3A21863947031
+
+# غسالات أطباق
+https://www.amazon.eg/s?rh=n%3A21863928031&s=price-asc-rank
+https://www.amazon.eg/s?rh=n%3A21863928031
+
+# موبايلات
+https://www.amazon.eg/s?rh=n%3A21832883031&s=price-asc-rank
+https://www.amazon.eg/s?rh=n%3A21832883031
